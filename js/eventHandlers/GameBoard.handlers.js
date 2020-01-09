@@ -11,14 +11,8 @@ function computeGameResults(gameBoardComponent,displayResults,resetGame,confirmC
             if(selectedBagElements.length<2){
                 $(element).classList.add(selectedClassName);
             }
-
-            if(confirmContinue("Click Ok To Continue With Selection, Reset To Change Your Selection")){
-                    displayResults(selectedBagElements,resetGame);
-            }
-            else
-            {
-                resetGame(gameBoardComponent.htmlElement.parentNode);
-            }
+           
+            document.querySelector(".lotto-star-message").innerHTML = "Click Ok To Continue With Selection, Reset To Clear Selection";
         });
          
     }

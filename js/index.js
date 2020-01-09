@@ -1,5 +1,5 @@
 import GameBoard from "./components/GameBoard.component.js";
-import GameCellHandler from "./eventHandlers/GameCell.handlers";
+import GameCellHandler from "./eventHandlers/GameCell.handlers.js";
 let gameBoardContainer = document.querySelector("#lotto-star-game-container");
 const okButton = document.getElementById("ok-button");
 const cancelButton = document.getElementById("cancel-button");

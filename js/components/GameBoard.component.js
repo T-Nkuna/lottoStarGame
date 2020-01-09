@@ -42,6 +42,7 @@ export default class GameBoard{
                 gameCellElement.setAttribute("id",this.gameCells.length);
                 this.htmlElement.appendChild(gameCellElement);
                 gameCell.htmlElement.addEventListener("click",GameCellHandlers.onClick);
+                gameCell.htmlElement.addEventListener("animationend",GameCellHandlers.onAnimationEnd);
                 
                 columnIndex+=1;
             }

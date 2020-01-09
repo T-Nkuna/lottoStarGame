@@ -20,6 +20,7 @@ function resetGame(gameBoardContainer){
     gameBoardContainer.innerHTML = "";
     lottoStarGameBoard.createHtmlElement();
     lottoStarGameBoard.render(gameBoardContainer);
+    document.querySelector(".lotto-star-message").innerHTML = "Click On A Bag To Start";
 }
 
 function confirmContinue(message){

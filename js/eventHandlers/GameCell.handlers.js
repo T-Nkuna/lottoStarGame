@@ -22,6 +22,7 @@ eventHandlers.onAnimationEnd = function(event){
   event.currentTarget.querySelector(".lotto-star-amount").classList.add("show-ele");
   event.currentTarget.querySelector(".lotto-star-amount").style.display = "inline-block";
   event.currentTarget.querySelector(".lotto-star-bag-icon").style.display ="none";
+  document.querySelector(".lotto-star-message").innerHTML = "Click Reset To Clear Selection";
    
 };
 

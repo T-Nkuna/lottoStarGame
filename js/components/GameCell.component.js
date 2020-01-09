@@ -19,9 +19,9 @@ export default class GameCell{
 
         iconContainer.classList.add(...this.iconClass.split(" "),"lotto-star-bag-icon");
         cellElement.classList.add("lotto-star-game-cell");
-        amountContainer.classList.add("lotto-star-amount")
+        amountContainer.classList.add("lotto-star-amount");
         
-        return this.cellElement;
+        return this.htmlElement;
     }
 
     render(containerComponent){

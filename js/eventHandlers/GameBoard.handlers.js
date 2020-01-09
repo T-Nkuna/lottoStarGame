@@ -12,7 +12,7 @@ function computeGameResults(gameBoardComponent,displayResults,resetGame,confirmC
                 $(element).classList.add(selectedClassName);
             }
            
-            document.querySelector(".lotto-star-message").innerHTML = "Click Ok To Continue With Selection, Reset To Clear Selection";
+            document.querySelector(".lotto-star-message").innerHTML = "<p style='padding:0.5em;border:2px dotted black'>Click Ok To Continue With Selection, Reset To Clear Selection</p>";
         });
          
     }

@@ -1,7 +1,7 @@
 let eventHandlers = {};
 
 eventHandlers.onClick = function(event){
-    if(!event.currentTarget.classList.contains("lotto-star-game-cell-selected"))
+    if(!event.currentTarget.classList.contains("lotto-star-game-cell-selected") && [...document.querySelectorAll(".lotto-star-game-cell-selected")].length<2)
     {
         event.currentTarget.classList.add("lotto-star-game-cell-selected");
     }

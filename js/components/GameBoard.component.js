@@ -3,10 +3,14 @@ import GameCellHandlers from "../eventHandlers/GameCell.handlers.js"
 import GameBoardHandlers from "../eventHandlers/GameBoard.handlers.js";
 export default class GameBoard{
 
-    constructor(rowLength,columnLength){
+    constructor(rowLength,columnLength,displayGameResults,resetGame,confirmContinue){
         this.rowLength = rowLength;
         this.columnLength = columnLength;
-        this.indices = [];
+        this.gameCells = [];
+        this.displayGameResults = displayGameResults;
+        this.resetGame = resetGame;
+        this.confirmContinue = confirmContinue;
+        
     }
 
     generateRandomAmount()
@@ -31,10 +35,11 @@ export default class GameBoard{
             let columnIndex =0;
             while(columnIndex<this.columnLength)
             {
-                let gameCell = new GameCell("fas fa-box-usd",this.generateRandomAmount());
+                let bagNum = this.gameCells.length+1;
+                let gameCell = new GameCell("fas fa-box-usd",this.generateRandomAmount(),`Bag ${bagNum}`);
                 let gameCellElement = gameCell.createHtmlElement();
-                this.indices.push(gameCell);
-                gameCellElement.setAttribute("id",this.indices.length-1);
+                this.gameCells.push(gameCell);
+                gameCellElement.setAttribute("id",this.gameCells.length);
                 this.htmlElement.appendChild(gameCellElement);
                 gameCell.htmlElement.addEventListener("click",GameCellHandlers.onClick);
                 
@@ -42,7 +47,7 @@ export default class GameBoard{
             }
             rowIndex+=1;
         }
-        this.htmlElement.addEventListener("click",GameBoardHandlers.onClick);
+        this.htmlElement.addEventListener("click",()=>GameBoardHandlers.onClick(this,this.displayGameResults,this.resetGame,this.confirmContinue));
         return this.htmlElement;
     }
 

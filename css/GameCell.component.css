@@ -4,17 +4,30 @@
     border-radius:50%;
     background-color:black;
     color:white;
-    font-size:2em;
+    font-size:1em;
     box-shadow:0px 2px 3px gray;
     cursor:pointer;
-    padding:1em;
+    width:98px;
+    height:98px;
+    padding-top:20%;
     box-sizing: border-box;
+    text-align:center;
 
 }
 
 .lotto-star-bag-icon,.lotto-star-game-cell
 {
     display:inline-block;
+}
+
+.lotto-star-bag-icon
+{
+    background-color:white;
+    color:black;
+    padding:0.25em;
+    box-shadow:0px 2px 4px goldenrod;
+    border:thin solid goldenrod;
+
 }
 
 .lotto-star-amount{

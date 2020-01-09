@@ -22,20 +22,25 @@
 
 .hide-ele{
    
-    animation:hide-element 2s forwards;
-    -webkit-animation: hide-element 2s forwards;
+    animation:hide-element 300ms forwards;
+    -webkit-animation: hide-element 300ms forwards;
 }
 
 .show-ele
 {
-    animation:show-element 1s forwards;
-    -webkit-animation:show-element 1s forwards;
+    animation:show-element 300ms forwards;
+    -webkit-animation:show-element 300ms forwards;
 }
 
 .lotto-star-game-cell-selected
 {
     border:4px solid #FFDD00;
     transition: border 300ms;
+}
+
+.lotto-star-confirm-box{
+    text-align:center;
+    
 }
 
 .display-none

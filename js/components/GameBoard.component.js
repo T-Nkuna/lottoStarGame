@@ -15,7 +15,7 @@ export default class GameBoard{
 
     generateRandomAmount()
     {
-        let amount = Math.floor(Math.random(250000)*1000000);
+        let amount = Math.floor(Math.random()*1000000)%250000;
         if(amount<500)
         {
             let diff = amount-500;
